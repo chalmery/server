@@ -1,0 +1,13 @@
+services:
+  pgsql:                          
+    image: postgres    
+    container_name: pgsql
+    ports:
+      - 5432:5432      
+    environment:
+      POSTGRES_DB: sso_db
+      POSTGRES_USERS_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - /user/local/docker/postgre/data:/home/ycc/code/java/server/docker/pgsql/pgdata

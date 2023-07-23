@@ -1,0 +1,13 @@
+services:
+  redis:                          
+    image: redis    
+    container_name: redis
+    ports:
+      - 6379:6379      
+    environment:   
+      TZ: Asia/Shanghai              
+    volumes: 
+      - /root/redis/data:/home/ycc/code/java/server/docker/redis/data
+      - /etc/redis/redis.conf:/home/ycc/code/java/server/docker/redis/redis.conf
+      - /apps/redis/logs:/logs
+    command: redis-server --requirepass redis

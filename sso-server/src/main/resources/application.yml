@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: sso
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sso_db
+    username: postgres
+    password: postgres
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info
+
+mybatis-plus:
+  mapper-locations: classpath*:/mybatis/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
