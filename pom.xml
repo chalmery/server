@@ -18,6 +18,7 @@
     <module>oss-server</module>
     <module>common</module>
     <module>sso-server</module>
+    <module>demo-server</module>
   </modules>
   <properties>
     <top.yangcc.server.common>1.0-SNAPSHOT</top.yangcc.server.common>

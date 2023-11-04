@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sso_db
+    username: postgres
+    password: postgres
+server:
+  port: 8000
+
+logging:
+  level:
+    root: info
